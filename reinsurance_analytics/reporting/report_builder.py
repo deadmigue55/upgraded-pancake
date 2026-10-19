@@ -185,23 +185,126 @@ class ActuarialReportBuilder:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{self.title}</title>
 <style>
-  body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #2b2d42; margin: 40px auto; max-width: 1000px; padding: 0 20px; }}
-  h1 {{ color: #1b4965; border-bottom: 2px solid #1b4965; padding-bottom: 8px; }}
-  h2 {{ color: #2a9d8f; margin-top: 30px; border-bottom: 1px solid #e0e0e0; padding-bottom: 4px; }}
-  h3 {{ color: #333; }}
-  blockquote {{ background: #f8f9fa; border-left: 4px solid #1b4965; margin: 0; padding: 10px 15px; font-style: italic; }}
-  table {{ border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 14px; }}
-  th, td {{ border: 1px solid #ddd; padding: 8px 12px; text-align: left; }}
-  th {{ background-color: #1b4965; color: white; }}
-  tr:nth-child(even) {{ background-color: #f8f9fa; }}
-  li {{ margin-bottom: 6px; }}
-  code {{ background: #f1f1f1; padding: 2px 5px; border-radius: 4px; font-size: 13px; }}
+  :root {{
+    --primary: #0f172a;
+    --accent: #0284c7;
+    --accent-light: #e0f2fe;
+    --secondary: #0d9488;
+    --bg-page: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --success: #16a34a;
+  }}
+  * {{ box-sizing: border-box; }}
+  body {{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    color: var(--text-main);
+    background-color: var(--bg-page);
+    margin: 0;
+    padding: 30px 20px;
+  }}
+  .container {{
+    max-width: 1080px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px 50px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid var(--border-color);
+  }}
+  h1 {{
+    color: #ffffff;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    padding: 24px 28px;
+    border-radius: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    margin: -10px -10px 30px -10px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.15);
+  }}
+  h2 {{
+    color: #0f172a;
+    margin-top: 36px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    font-size: 20px;
+  }}
+  h3 {{
+    color: #334155;
+    font-size: 16px;
+    margin-top: 22px;
+  }}
+  blockquote {{
+    background: var(--accent-light);
+    border-left: 5px solid var(--accent);
+    margin: 15px 0;
+    padding: 12px 18px;
+    border-radius: 0 8px 8px 0;
+    color: #0369a1;
+    font-size: 14px;
+  }}
+  table {{
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 22px 0;
+    font-size: 13.5px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }}
+  th, td {{
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }}
+  th {{
+    background-color: #0f172a;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }}
+  tr:last-child td {{
+    border-bottom: none;
+  }}
+  tr:nth-child(even) {{
+    background-color: #f8fafc;
+  }}
+  tr:hover {{
+    background-color: #f1f5f9;
+  }}
+  li {{
+    margin-bottom: 8px;
+    color: #334155;
+  }}
+  code {{
+    background: #f1f5f9;
+    color: #be185d;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    border: 1px solid #e2e8f0;
+  }}
+  strong {{
+    color: #0f172a;
+  }}
+  p {{
+    margin: 12px 0;
+  }}
 </style>
 </head>
 <body>
+<div class="container">
 {"".join(html_body)}
+</div>
 </body>
 </html>"""
 

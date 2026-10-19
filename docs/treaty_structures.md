@@ -43,3 +43,12 @@ When a loss erodes the layer limit $L$, reinstatements restore cover up to $n$ t
 Protects against high overall annual loss ratio or cumulative portfolio claim volume:
 $$\text{Stop Loss Recovery}(S) = \min(\max(0, S - A_{\text{agg}}), L_{\text{agg}})$$
 where $S = \sum_{i=1}^N X_i$ is annual aggregate loss.
+
+---
+
+## 🧭 Related Documentation
+- 🔄 [**End-to-End Quantitative Process**](process.md)
+- ⚡ [**Technologies Used & Market Practice Comparison**](technologies_used.md)
+- 📊 [**Empirical Results & Solvency Case Studies**](results.md)
+- 📐 [**Actuarial Methodology & Mathematical Foundations**](actuarial_methodology.md)
+- 🏠 [**Project Main Page (README)**](../README.md)

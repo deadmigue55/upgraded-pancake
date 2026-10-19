@@ -124,3 +124,12 @@ For Poisson($\lambda$): $a = 0, b = \lambda \implies g_k = \frac{\lambda}{k} \su
 
 $$\text{SCR} = \text{VaR}_{0.995}(S) - \mathbb{E}[S]$$
 $$\text{Capital Relief} = \text{SCR}_{\text{Gross}} - \text{SCR}_{\text{Net}}$$
+
+---
+
+## 🧭 Related Documentation
+- 🔄 [**End-to-End Quantitative Process**](process.md)
+- ⚡ [**Technologies Used & Market Practice Comparison**](technologies_used.md)
+- 📊 [**Empirical Results & Solvency Case Studies**](results.md)
+- 🏗️ [**Reinsurance Treaty Structures**](treaty_structures.md)
+- 🏠 [**Project Main Page (README)**](../README.md)
